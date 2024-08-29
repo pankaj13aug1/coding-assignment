@@ -8,10 +8,10 @@ const videoTrailerSlice = createSlice({
     },
     reducers: {
         setVideoKey: (state, action) => {
-            state.videoId = action.payload
+            state.videoId = action.payload;
         },
         resetVideoKey: (state) => {
-            state.videoId = ''
+            state.videoId = '';
         },
         openVideo: (state) => {
             state.isOpen = true;

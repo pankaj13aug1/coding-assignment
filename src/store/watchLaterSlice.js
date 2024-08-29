@@ -7,14 +7,14 @@ const watchLaterSlice = createSlice({
     },
     reducers: {
         addToWatchLater: (state, action) => {
-            state.watchLaterMovies = [action.payload, ...state.watchLaterMovies]
+            state.watchLaterMovies = [action.payload, ...state.watchLaterMovies];
         },
         removeFromWatchLater: (state, action) => {
-            const indexOfId = state.watchLaterMovies.findIndex(key => key.id === action.payload.id)
-            state.watchLaterMovies.splice(indexOfId, 1)
+            const indexOfId = state.watchLaterMovies.findIndex(key => key.id === action.payload.id);
+            state.watchLaterMovies.splice(indexOfId, 1);
         },
-        removeAllWatchLater: (state) => {
-            state.watchLaterMovies = []
+        remveAllWatchLater: (state) => {
+            state.watchLaterMovies = [];
         },
     },
 })

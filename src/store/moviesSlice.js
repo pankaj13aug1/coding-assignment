@@ -90,6 +90,7 @@ const moviesSlice = createSlice({
         state.fetchStatus = "error";
       })
       .addCase(discoverMovies.fulfilled, (state, action) => {
+        // console.log(action.payload, ' action.payloadaction.payloadaction.payloadaction.payloadaction.payload');
         state.movies = [...state.movies, ...action.payload.results];
         state.movies = removeRepeatedMovies(state.movies);
         state.hasNextPage = state.pageNumber < action.payload.total_pages;

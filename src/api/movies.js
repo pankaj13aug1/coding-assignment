@@ -13,9 +13,9 @@ const getMovieById = async (id) => {
   }
 
 const getMoviesBySearchTerm = async (searchTerm, page, signal) => {
-    const completeSearchUrl = `${urlSearchMovies}&query=${searchTerm}&page=${page}`
+    const url = `${urlSearchMovies}&query=${searchTerm}&page=${page}`
 
-    const response = await fetch(completeSearchUrl, {
+    const response = await fetch(url, {
         signal
     });
 
@@ -24,9 +24,9 @@ const getMoviesBySearchTerm = async (searchTerm, page, signal) => {
 }
 
 const getMoviesByDiscover = async (page, signal) => {
-    const completeDiscoverUrl = `${urlDiscoverMovies}&page=${page}`
+    const url = `${urlDiscoverMovies}&page=${page}`
 
-    const response = await fetch(completeDiscoverUrl, {
+    const response = await fetch(url, {
             signal
         }
     );

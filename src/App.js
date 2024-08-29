@@ -1,7 +1,5 @@
 import { Routes, Route } from "react-router-dom"
 import 'reactjs-popup/dist/index.css'
-
-
 import { Index, Header, Starred, WatchLater } from './components/index.js'
 
 import './app.scss'

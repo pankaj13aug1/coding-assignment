@@ -1,6 +1,6 @@
 import Popup from "reactjs-popup";
 import { YoutubePlayer } from "../index.js";
-import './modal.css'
+import './modal.scss'
 
 const Modal = ({isOpen, videoKey, closeModal}) => {
     return(
@@ -10,7 +10,7 @@ const Modal = ({isOpen, videoKey, closeModal}) => {
             onClose={()=>{ closeModal() }}
             className="modalTrailer"
             >  
-            <button className="btn btn-outline-dark btn-sm" id="btn-close-popup" onClick={closeModal}><b>X</b></button>         
+            <button className="btn btn-sm" id="btn-close-popup" onClick={closeModal}><b>X</b></button>         
             {videoKey ? (<YoutubePlayer videoKey={videoKey}/>) : (<h1 className="no-trailer-message">No trailer found!</h1>)}
             </Popup>
         </div>
